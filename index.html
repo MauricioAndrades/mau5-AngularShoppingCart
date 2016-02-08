@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="modApp">
 <head>
 	<meta charset="utf-8">
 	<title>{{ greeting }} World</title>
 </head>
 <body>
+
+	<div ng-controller="HelloController">
+		<h2>Hello, {{ hello.title }}</h2>
+	</div>
+	
 	<p>
 		{{1 + 6}}
 	</p><br>
@@ -31,5 +36,7 @@
 
 	<!-- cdn -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+	<!-- javascript -->
+	<script src="javascript/controllers/HelloController.js" type="text/javascript"></script>
 </body>
 </html>
