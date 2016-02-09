@@ -9,6 +9,19 @@
 	</head>
 
 	<body>
+		<div></div>
+	
+		<div ng-controller="ExerciseController">
+			<div ng-class="'favoritecolor'">{{ FavColor }}</div>
+			<div ng-class="'favoritecolor'">{{ secondsInACentury }}</div>
+		</div>
+		<!-- ch7 controllers -->
+		<div ng-controller="MyFirstController">
+			<h1>My name is: {{ name }}</h1>
+			<input type="text" ng-model="name" placeholder="what is your name">
+		</div>
+		
+		<div class="clear"></div>
 		<!-- ng-show -->
 		<div class="frame">
 			<div ng-show="3 + 4 === 5">

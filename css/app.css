@@ -44,3 +44,9 @@
 .frame {
   border: 1px dotted;
 }
+
+.favoritecolor {
+  font-size: 100px;
+  color: yellow;
+  background-color: black;
+}
