@@ -10,8 +10,15 @@
 
 	<body>
 	
-		<div ng-init="duplicates=[1,1,2,5,6,9,9,9]"></div>
-		<div ng-repeat="duplicates in duplicates"></div>
+		<div class="frame">
+			<div ng-init="array=[1,1,2,5,6,9,9,9]">
+				<ul>
+					<li ng-repeat="number in array track by $index">
+						{{ number }}
+					</li>
+				</ul>
+			</div>
+		</div>
 
 		<!-- chapter5 symbols -->
 		<div class="frame">
