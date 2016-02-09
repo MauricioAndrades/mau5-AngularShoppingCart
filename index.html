@@ -7,9 +7,9 @@
 	</head>
 	
 	<!-- ch4:68 -->
-	<input type="text" ng-model="uppercase">
+	<input type="text" ng-model="touppercase">
 	<div>All Entries:</div>
-	<span ng-model="uppercase"><h1>{{ uppercase }}</h1></span>
+	<span ng-model="touppercase"><h1>{{ touppercase | uppercase}}</h1></span>
 
 	<div id="default-spacing">{{ {'name':'value'} | json:4 }}</div>
 
