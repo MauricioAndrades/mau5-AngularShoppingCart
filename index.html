@@ -5,7 +5,9 @@
 		<meta charset="utf-8">
 		<title ng-controller="PageController">{{ pagetitle }}</title>
 	</head>
-	
+
+	<div id="default-spacing">{{ {'name':'value'} | json:4 }}</div>
+
 	<body ng-init="names=['harry', 'ron', 'hate angular']">
 
 		<div class="chapter5">
@@ -27,7 +29,7 @@
 		</div>
 
 		<div class="exp-filters">{{3.14159265359 | currency }}</div>
-		
+
 		<!-- date filter -->
 		<span class="exp-filters">{{1288323623006 | date:'medium'}}</span>
 
@@ -39,7 +41,7 @@
 		<div ng-controller="HelloController">
 			<h2>Hello, {{ hello.title }}</h2>
 		</div>
-		
+
 		<p>{{1 + 6}}</p><br>
 
 		<p>
@@ -48,17 +50,17 @@
 		</p>
 
 		<p>{{ greeting }} world!</p>
-		
+
 		<input type="text" placeholder="What is your name" ng-model="name">
 		<h1>my name is {{ name }}</h1>
-		
+
 		<select name="dropdown" id="dropdown-menu" ng-model="dropdown">
 			<option value="dogs">dogs</option>
 			<option value="cat">cats</option>
 			<option value="cats dogs">cats dogs</option>
 			<option value="other">other</option>
 		</select>
-		<h3 ng-mode="dropdown" ng-cloak>{{ dropdown }}</h3>
+		<h2 ng-mode="dropdown" ng-cloak>{{ dropdown }}</h3>
 
 		<!-- cdn -->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
