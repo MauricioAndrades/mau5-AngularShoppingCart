@@ -5,7 +5,13 @@
 		<meta charset="utf-8">
 		<title ng-controller="PageController">{{ pagetitle }}</title>
 	</head>
-<body>
+<body ng-init="names=['harry', 'ron', 'hate angular']">
+
+	<div class="chapter5">
+		<ul>
+			<li ng-repeat="name in names">{{ name }}</li>
+		</ul>
+	</div>
 
 	<div class="exp-filters">
 		<p>{{3.14159265359 | number:3}}<br></p>
