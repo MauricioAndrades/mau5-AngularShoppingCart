@@ -4,19 +4,36 @@
 	<head>
 		<meta charset="utf-8">
 		<title ng-controller="PageController">{{ pagetitle }}</title>
+		<link rel="stylesheet" href="css/app.css">
 	</head>
+
+
+	<!-- ch4 -->
+	<body ng-init="names=['harry', 'ron', 'hate angular']">
 	
+	Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide"><br/>
+	<div>
+	  Show:
+	  <div class="check-element animate-show" ng-show="checked">
+	    <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
+	  </div>
+	</div>
+	<div>
+	  Hide:
+	  <div class="check-element animate-show" ng-hide="checked">
+	    <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
+	  </div>
+	</div>
+
+
 	<!-- ch4:68 -->
 	<input type="text" ng-model="touppercase">
 	<div>All Entries:</div>
 	<span ng-model="touppercase"><h1>{{ touppercase | uppercase}}</h1></span>
 	<span ng-model="touppercase"><h1>{{ touppercase | lowercase}}</h1></span>
-	
+
 	<!-- ch4 -->
 	<div id="default-spacing">{{ {'name':'value'} | json:4 }}</div>
-	
-	<!-- ch4 -->
-	<body ng-init="names=['harry', 'ron', 'hate angular']">
 
 		<div class="chapter5">
 			<ul>
