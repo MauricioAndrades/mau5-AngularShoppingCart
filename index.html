@@ -5,64 +5,65 @@
 		<meta charset="utf-8">
 		<title ng-controller="PageController">{{ pagetitle }}</title>
 	</head>
-<body ng-init="names=['harry', 'ron', 'hate angular']">
-
-	<div class="chapter5">
-		<ul>
-			<li ng-repeat="name in names">{{ name }}</li>
-		</ul>
-	</div>
-
-	<div class="exp-filters">
-		<p>{{3.14159265359 | number:3}}<br></p>
-		<p>{{3.14159265359 | number:6}}<br></p>
-		<p>{{3.14159265359 | number:1}}<br></p>
-	</div>
-
-	<div class="exp-filters" ng-controller="FilterController">
-		<span>
-			{{name}}
-		</span>
-	</div>
-
-	<div class="exp-filters">{{3.14159265359 | currency }}</div>
 	
-	<!-- date filter -->
-	<span class="exp-filters">{{1288323623006 | date:'medium'}}</span>
+	<body ng-init="names=['harry', 'ron', 'hate angular']">
 
-	<div class="exp-filters">
-		<p>1+2 = {{ 1+2 }}</p><br>
-		<p>The array [99,43,22] is {{ [99,43,22].length }} items long.</p>
-	</div>
+		<div class="chapter5">
+			<ul>
+				<li ng-repeat="name in names">{{ name }}</li>
+			</ul>
+		</div>
 
-	<div ng-controller="HelloController">
-		<h2>Hello, {{ hello.title }}</h2>
-	</div>
-	
-	<p>{{1 + 6}}</p><br>
+		<div class="exp-filters">
+			<p>{{3.14159265359 | number:3}}<br></p>
+			<p>{{3.14159265359 | number:6}}<br></p>
+			<p>{{3.14159265359 | number:1}}<br></p>
+		</div>
 
-	<p>
-		Say something to the world
-		<input type="text" ng-model="greeting" ng-init="greeting='Hello, '">
-	</p>
+		<div class="exp-filters" ng-controller="FilterController">
+			<span>
+				{{name}}
+			</span>
+		</div>
 
-	<p>{{ greeting }} world!</p>
-	
-	<input type="text" placeholder="What is your name" ng-model="name">
-	<h1>my name is {{ name }}</h1>
-	
-	<select name="dropdown" id="dropdown-menu" ng-model="dropdown">
-		<option value="dogs">dogs</option>
-		<option value="cat">cats</option>
-		<option value="cats dogs">cats dogs</option>
-		<option value="other">other</option>
-	</select>
-	<h3 ng-mode="dropdown" ng-cloak>{{ dropdown }}</h3>
+		<div class="exp-filters">{{3.14159265359 | currency }}</div>
+		
+		<!-- date filter -->
+		<span class="exp-filters">{{1288323623006 | date:'medium'}}</span>
 
-	<!-- cdn -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
-	<!-- javascript -->
-	<script src="app.js" type="text/javascript"></script>
-	<!-- <script src="javascript/controllers/FilterController.js" type="text/javascript"></script> -->
-</body>
+		<div class="exp-filters">
+			<p>1+2 = {{ 1+2 }}</p><br>
+			<p>The array [99,43,22] is {{ [99,43,22].length }} items long.</p>
+		</div>
+
+		<div ng-controller="HelloController">
+			<h2>Hello, {{ hello.title }}</h2>
+		</div>
+		
+		<p>{{1 + 6}}</p><br>
+
+		<p>
+			Say something to the world
+			<input type="text" ng-model="greeting" ng-init="greeting='Hello, '">
+		</p>
+
+		<p>{{ greeting }} world!</p>
+		
+		<input type="text" placeholder="What is your name" ng-model="name">
+		<h1>my name is {{ name }}</h1>
+		
+		<select name="dropdown" id="dropdown-menu" ng-model="dropdown">
+			<option value="dogs">dogs</option>
+			<option value="cat">cats</option>
+			<option value="cats dogs">cats dogs</option>
+			<option value="other">other</option>
+		</select>
+		<h3 ng-mode="dropdown" ng-cloak>{{ dropdown }}</h3>
+
+		<!-- cdn -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+		<!-- javascript -->
+		<script src="app.js" type="text/javascript"></script>
+		<!-- <script src="javascript/controllers/FilterController.js" type="text/javascript"></script> -->
+	</body>
 </html>
