@@ -5,6 +5,11 @@
 		<meta charset="utf-8">
 		<title ng-controller="PageController">{{ pagetitle }}</title>
 	</head>
+	
+	<!-- ch4:68 -->
+	<input type="text" ng-model="uppercase">
+	<div>All Entries:</div>
+	<span ng-model="uppercase"><h1>{{ uppercase }}</h1></span>
 
 	<div id="default-spacing">{{ {'name':'value'} | json:4 }}</div>
 
@@ -60,7 +65,7 @@
 			<option value="cats dogs">cats dogs</option>
 			<option value="other">other</option>
 		</select>
-		<h2 ng-mode="dropdown" ng-cloak>{{ dropdown }}</h3>
+		<h2 ng-model="dropdown" ng-cloak>{{ dropdown }}</h3>
 
 		<!-- cdn -->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
