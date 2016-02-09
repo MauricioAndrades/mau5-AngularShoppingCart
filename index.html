@@ -10,9 +10,12 @@
 	<input type="text" ng-model="touppercase">
 	<div>All Entries:</div>
 	<span ng-model="touppercase"><h1>{{ touppercase | uppercase}}</h1></span>
-
+	<span ng-model="touppercase"><h1>{{ touppercase | lowercase}}</h1></span>
+	
+	<!-- ch4 -->
 	<div id="default-spacing">{{ {'name':'value'} | json:4 }}</div>
-
+	
+	<!-- ch4 -->
 	<body ng-init="names=['harry', 'ron', 'hate angular']">
 
 		<div class="chapter5">
