@@ -7,23 +7,32 @@
 		<link rel="stylesheet" href="css/app.css">
 	</head>
 
-
-	<!-- ch4 -->
-	<body ng-init="names=['harry', 'ron', 'hate angular']">
+	<body>
 	
-	Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide"><br/>
+	<!-- chapter5 symbols -->
+	<div ng-init="symbols=['&spades;', '&clubs;', '&hearts;', '&diams;']"></div>
+	<div ng-repeat="symbols in symbols" style="height:50px;">{{ symbols }}</div>
+
+	<div style="height:50px; width: 100%;"></div>
+	<!-- angular docs http://opmac.local:50581/Dash/zczjaksz/angularjs/code.angularjs.org/1.4.9/docs/api/ng/directive/ngShow.html -->
 	<div>
-	  Show:
-	  <div class="check-element animate-show" ng-show="checked">
-	    <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
-	  </div>
+		Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide"><br/>
+		<div>
+		  Show:
+		  <div class="check-element animate-show" ng-show="checked">
+		    <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
+		  </div>
+		</div>
+		<div>
+		  Hide:
+		  <div class="check-element animate-show" ng-hide="checked">
+		    <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
+		  </div>
+		</div>
 	</div>
-	<div>
-	  Hide:
-	  <div class="check-element animate-show" ng-hide="checked">
-	    <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
-	  </div>
-	</div>
+	
+	<!-- clear -->
+	<div style="height:50px; width: 100%;"></div>
 
 
 	<!-- ch4:68 -->
@@ -31,27 +40,35 @@
 	<div>All Entries:</div>
 	<span ng-model="touppercase"><h1>{{ touppercase | uppercase}}</h1></span>
 	<span ng-model="touppercase"><h1>{{ touppercase | lowercase}}</h1></span>
+	<!-- clear -->
+	<div style="height:50px; width: 100%;"></div>
 
 	<!-- ch4 -->
 	<div id="default-spacing">{{ {'name':'value'} | json:4 }}</div>
 
-		<div class="chapter5">
+		<div class="chapter5" ng-init="names=['harry', 'ron', 'hate angular']">
 			<ul>
 				<li ng-repeat="name in names">{{ name }}</li>
 			</ul>
 		</div>
+		<!-- clear -->
+		<div style="height:50px; width: 100%;"></div>
 
 		<div class="exp-filters">
 			<p>{{3.14159265359 | number:3}}<br></p>
 			<p>{{3.14159265359 | number:6}}<br></p>
 			<p>{{3.14159265359 | number:1}}<br></p>
 		</div>
+		<!-- clear -->
+		<div style="height:50px; width: 100%;"></div>
 
 		<div class="exp-filters" ng-controller="FilterController">
 			<span>
 				{{name}}
 			</span>
 		</div>
+		<!-- clear -->
+		<div style="height:50px; width: 100%;"></div>
 
 		<div class="exp-filters">{{3.14159265359 | currency }}</div>
 
@@ -62,6 +79,8 @@
 			<p>1+2 = {{ 1+2 }}</p><br>
 			<p>The array [99,43,22] is {{ [99,43,22].length }} items long.</p>
 		</div>
+		<!-- clear -->
+		<div style="height:50px; width: 100%;"></div>
 
 		<div ng-controller="HelloController">
 			<h2>Hello, {{ hello.title }}</h2>
