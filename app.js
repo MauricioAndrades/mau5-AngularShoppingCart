@@ -5,13 +5,14 @@ var app = angular.module('modApp', []);
 app.controller('ExerciseController', function($scope) {
     $scope.FavColor = 'yellow';
 
-    $scope.secondsInACentury = function($scope) {
+    function getseconds($scope) {
     	var startofcentury = new Date(1900,01,01);
     	var endofcentury = new Date(1999,12,31);
 		var milliSeconds = endofcentury - startofcentury;
 		var seconds = milliSeconds/1000;
-        $scope.seconds = seconds;
+        return $scope.secondsInACentury = seconds;
     };
+    
 });
 
 app.controller('MyFirstController', function($scope) {
