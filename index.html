@@ -8,17 +8,17 @@
 	</head>
 
 	<body>
-	
-		<div ng-controller="ExerciseController">
-			<div ng-class="'favoritecolor'">{{ FavColor }}</div>
-			<div ng-class="'favoritecolor'">{{ secondsInACentury }}</div>
+
+		<div>
+			<!-- <div ng-class="'favoritecolor'">{{ FavColor }}</div> -->
+			<div ng-controller="ExerciseController" ng-class="'favoritecolor'">seconds: {{ seconds }}</div>
 		</div>
 		<!-- ch7 controllers -->
 		<div ng-controller="MyFirstController">
 			<h1>My name is: {{ name }}</h1>
 			<input type="text" ng-model="name" placeholder="what is your name">
 		</div>
-		
+
 		<div class="clear"></div>
 		<!-- ng-show -->
 		<div class="frame">
@@ -59,24 +59,24 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-	
+
 		<!-- button -->
 		<div class="frame">
-			<input id="setbtn" type="button" value="set" ng-click="myVar='my-class'">		
-			<input id="clearbtn" type="button" value="clear" ng-click="myVar=''">		
-			<br>		
+			<input id="setbtn" type="button" value="set" ng-click="myVar='my-class'">
+			<input id="clearbtn" type="button" value="clear" ng-click="myVar=''">
+			<br>
 			<span class="base-class" ng-class="myVar">
 				Sample Text
 			</span>
 		</div>
 
 		<div class="clear"></div>
-	
+
 		<!-- angular docs http://opmac.local:50581/Dash/zczjaksz/angularjs/code.angularjs.org/1.4.9/docs/api/ng/directive/ngShow.html -->
 		<div class="frame">
 			Click me:
-			<input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">		
-			<br/>		
+			<input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
+			<br/>
 			<div>
 				Show:
 				<div class="check-element animate-show" ng-show="checked">
@@ -106,14 +106,14 @@
 
 		<!-- clear -->
 		<div class="clear"></div>
-	
+
 		<!-- chapter5 -->
 		<div class="chapter5" ng-init="names=['harry', 'ron', 'hate angular']">
 			<ul>
 				<li ng-repeat="name in names">{{ name }}</li>
 			</ul>
 		</div>
-	
+
 		<!-- clear -->
 		<div class="clear"></div>
 
@@ -122,7 +122,7 @@
 			<p>{{3.14159265359 | number:6}}<br></p>
 			<p>{{3.14159265359 | number:1}}<br></p>
 		</div>
-	
+
 		<!-- clear -->
 		<div class="clear"></div>
 
@@ -131,7 +131,7 @@
 				{{name}}
 			</span>
 		</div>
-	
+
 		<!-- clear -->
 		<div class="clear"></div>
 
