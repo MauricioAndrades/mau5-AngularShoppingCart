@@ -49,4 +49,12 @@
   font-size: 100px;
   color: yellow;
   background-color: black;
+  width: 100%;
+}
+
+.rightnow {
+  font-size: 100px;
+  color: blue;
+  background-color: black;
+  width: 100%;
 }

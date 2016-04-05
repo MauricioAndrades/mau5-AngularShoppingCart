@@ -15,6 +15,7 @@ app.controller('ExerciseController', function($scope) {
 
     $scope.seconds = getseconds();
 
+    $scope.rightnow = Date.now();
 });
 
 app.controller('MyFirstController', function($scope) {

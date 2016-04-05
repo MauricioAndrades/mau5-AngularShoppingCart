@@ -1,182 +1,186 @@
 <!doctype html/>
 <html ng-app="modApp">
-	<head>
-		<meta charset="utf-8">
-		<title ng-controller="PageController">{{ pagetitle }}</title>
-		<link rel="stylesheet" href="css/app.css">
-		<script src="bower_components/jquery/dist/jquery.js"></script>
-	</head>
+    <head>
+        <meta charset="utf-8">
+        <title ng-controller="PageController">{{ pagetitle }}</title>
+        <link rel="stylesheet" href="css/app.css">
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+    </head>
 
-	<body>
+    <body>
 
-		<div>
-			<!-- <div ng-class="'favoritecolor'">{{ FavColor }}</div> -->
-			<div ng-controller="ExerciseController" ng-class="'favoritecolor'">seconds: {{ seconds }}</div>
-		</div>
-		<!-- ch7 controllers -->
-		<div ng-controller="MyFirstController">
-			<h1>My name is: {{ name }}</h1>
-			<input type="text" ng-model="name" placeholder="what is your name">
-		</div>
+        <div>
+            <!-- <div ng-class="'favoritecolor'">{{ FavColor }}</div> -->
+            <div ng-controller="ExerciseController" ng-class="'favoritecolor'">seconds: {{ seconds }}</div>
+            <div ng-class="'rightnow'">
+                <span ng-controller="ExerciseController">{{ rightnow | date: 'medium' }}</span>
+            </div>
+        </div>
 
-		<div class="clear"></div>
-		<!-- ng-show -->
-		<div class="frame">
-			<div ng-show="3 + 4 === 5">
-				3 + 4 isn't 5, don't show
-			</div>
+        <!-- ch7 controllers -->
+        <div ng-controller="MyFirstController">
+            <h1>My name is: {{ name }}</h1>
+            <input type="text" ng-model="name" placeholder="what is your name">
+        </div>
 
-			<div ng-show="3 + 4 === 7">
-				3+4 is 7, do show
-			</div>
+        <div class="clear"></div>
+        <!-- ng-show -->
+        <div class="frame">
+            <div ng-show="3 + 4 === 5">
+                3 + 4 isn't 5, don't show
+            </div>
 
-			<div ng-hide="3+4===5">
-				3+4 is not 5, don't hide
-			</div>
+            <div ng-show="3 + 4 === 7">
+                3+4 is 7, do show
+            </div>
 
-			<div ng-hide="3+4===7">
-				3+4 is seven, hide
-			</div>
-		</div>
+            <div ng-hide="3+4===5">
+                3+4 is not 5, don't hide
+            </div>
 
-		<!-- ng-repeat -->
-		<div class="clear"></div>
-		<div class="frame">
-			<div ng-init="array=[1,1,2,5,6,9,9,9]">
-				<ul>
-					<li ng-repeat="number in array track by $index">
-						{{ number }}
-					</li>
-				</ul>
-			</div>
-		</div>
+            <div ng-hide="3+4===7">
+                3+4 is seven, hide
+            </div>
+        </div>
 
-		<!-- chapter5 symbols -->
-		<div class="frame">
-			<div ng-init="symbols=['&spades;', '&clubs;', '&hearts;', '&diams;']"></div>
-			<div ng-repeat="symbols in symbols" ng-class="'symbols'">
-				{{ symbols }}
-			</div>
-			<div class="clear"></div>
-		</div>
+        <!-- ng-repeat -->
+        <div class="clear"></div>
+        <div class="frame">
+            <div ng-init="array=[1,1,2,5,6,9,9,9]">
+                <ul>
+                    <li ng-repeat="number in array track by $index">
+                        {{ number }}
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-		<!-- button -->
-		<div class="frame">
-			<input id="setbtn" type="button" value="set" ng-click="myVar='my-class'">
-			<input id="clearbtn" type="button" value="clear" ng-click="myVar=''">
-			<br>
-			<span class="base-class" ng-class="myVar">
-				Sample Text
-			</span>
-		</div>
+        <!-- chapter5 symbols -->
+        <div class="frame">
+            <div ng-init="symbols=['&spades;', '&clubs;', '&hearts;', '&diams;']"></div>
+            <div ng-repeat="symbols in symbols" ng-class="'symbols'">
+                {{ symbols }}
+            </div>
+            <div class="clear"></div>
+        </div>
 
-		<div class="clear"></div>
+        <!-- button -->
+        <div class="frame">
+            <input id="setbtn" type="button" value="set" ng-click="myVar='my-class'">
+            <input id="clearbtn" type="button" value="clear" ng-click="myVar=''">
+            <br>
+            <span class="base-class" ng-class="myVar">
+                Sample Text
+            </span>
+        </div>
 
-		<!-- angular docs http://opmac.local:50581/Dash/zczjaksz/angularjs/code.angularjs.org/1.4.9/docs/api/ng/directive/ngShow.html -->
-		<div class="frame">
-			Click me:
-			<input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
-			<br/>
-			<div>
-				Show:
-				<div class="check-element animate-show" ng-show="checked">
-					<span class="glyphicon glyphicon-thumbs-up"></span>
-					I show up when your checkbox is checked.
-				</div>
-			</div>
-			<div>
-				Hide:
-				<div class="check-element animate-show" ng-hide="checked">
-					<span class="glyphicon glyphicon-thumbs-down"></span>
-					I hide when your checkbox is checked.
-				</div>
-			</div>
-		</div>
+        <div class="clear"></div>
 
-		<!-- clear -->
-		<div class="clear"></div>
+        <!-- angular docs http://opmac.local:50581/Dash/zczjaksz/angularjs/code.angularjs.org/1.4.9/docs/api/ng/directive/ngShow.html -->
+        <div class="frame">
+            Click me:
+            <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
+            <br/>
+            <div>
+                Show:
+                <div class="check-element animate-show" ng-show="checked">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    I show up when your checkbox is checked.
+                </div>
+            </div>
+            <div>
+                Hide:
+                <div class="check-element animate-show" ng-hide="checked">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                    I hide when your checkbox is checked.
+                </div>
+            </div>
+        </div>
 
-		<!-- ch4:68 -->
-		<div class="frame">
-			<input type="text" ng-model="touppercase">
-			<div>All Entries:</div>
-			<span ng-model="touppercase"><h1>{{ touppercase | uppercase}}</h1></span>
-			<span ng-model="touppercase"><h1>{{ touppercase | lowercase}}</h1></span>
-		</div>
+        <!-- clear -->
+        <div class="clear"></div>
 
-		<!-- clear -->
-		<div class="clear"></div>
+        <!-- ch4:68 -->
+        <div class="frame">
+            <input type="text" ng-model="touppercase">
+            <div>All Entries:</div>
+            <span ng-model="touppercase"><h1>{{ touppercase | uppercase}}</h1></span>
+            <span ng-model="touppercase"><h1>{{ touppercase | lowercase}}</h1></span>
+        </div>
 
-		<!-- chapter5 -->
-		<div class="chapter5" ng-init="names=['harry', 'ron', 'hate angular']">
-			<ul>
-				<li ng-repeat="name in names">{{ name }}</li>
-			</ul>
-		</div>
+        <!-- clear -->
+        <div class="clear"></div>
 
-		<!-- clear -->
-		<div class="clear"></div>
+        <!-- chapter5 -->
+        <div class="chapter5" ng-init="names=['harry', 'ron', 'hate angular']">
+            <ul>
+                <li ng-repeat="name in names">{{ name }}</li>
+            </ul>
+        </div>
 
-		<div class="exp-filters">
-			<p>{{3.14159265359 | number:3}}<br></p>
-			<p>{{3.14159265359 | number:6}}<br></p>
-			<p>{{3.14159265359 | number:1}}<br></p>
-		</div>
+        <!-- clear -->
+        <div class="clear"></div>
 
-		<!-- clear -->
-		<div class="clear"></div>
+        <div class="exp-filters">
+            <p>{{3.14159265359 | number:3}}<br></p>
+            <p>{{3.14159265359 | number:6}}<br></p>
+            <p>{{3.14159265359 | number:1}}<br></p>
+        </div>
 
-		<div class="exp-filters" ng-controller="FilterController">
-			<span>
-				{{name}}
-			</span>
-		</div>
+        <!-- clear -->
+        <div class="clear"></div>
 
-		<!-- clear -->
-		<div class="clear"></div>
+        <div class="exp-filters" ng-controller="FilterController">
+            <span>
+                {{name}}
+            </span>
+        </div>
 
-		<!-- currency -->
-		<div class="exp-filters">{{3.14159265359 | currency }}</div>
+        <!-- clear -->
+        <div class="clear"></div>
 
-		<!-- date filter -->
-		<span class="exp-filters">{{1288323623006 | date:'medium'}}</span>
+        <!-- currency -->
+        <div class="exp-filters">{{3.14159265359 | currency }}</div>
 
-		<div class="exp-filters">
-			<p>1+2 = {{ 1+2 }}</p><br>
-			<p>The array [99,43,22] is {{ [99,43,22].length }} items long.</p>
-		</div>
-		<!-- clear -->
-		<div class="clear"></div>
+        <!-- date filter -->
+        <span class="exp-filters">{{1288323623006 | date:'medium'}}</span>
 
-		<div ng-controller="HelloController">
-			<h2>Hello, {{ hello.title }}</h2>
-		</div>
+        <div class="exp-filters">
+            <p>1+2 = {{ 1+2 }}</p><br>
+            <p>The array [99,43,22] is {{ [99,43,22].length }} items long.</p>
+        </div>
+        <!-- clear -->
+        <div class="clear"></div>
 
-		<p>{{1 + 6}}</p><br>
+        <div ng-controller="HelloController">
+            <h2>Hello, {{ hello.title }}</h2>
+        </div>
 
-		<p>
-			Say something to the world
-			<input type="text" ng-model="greeting" ng-init="greeting='Hello, '">
-		</p>
+        <p>{{1 + 6}}</p><br>
 
-		<p>{{ greeting }} world!</p>
+        <p>
+            Say something to the world
+            <input type="text" ng-model="greeting" ng-init="greeting='Hello, '">
+        </p>
 
-		<input type="text" placeholder="What is your name" ng-model="name">
-		<h1>my name is {{ name }}</h1>
+        <p>{{ greeting }} world!</p>
 
-		<!-- DROPDOWN MENU	 -->
-		<select name="dropdown" id="dropdown-menu" ng-model="dropdown">
-			<option value="dogs">dogs</option>
-			<option value="cat">cats</option>
-			<option value="cats dogs">cats dogs</option>
-			<option value="other">other</option>
-		</select>
-		<h2 ng-model="dropdown" ng-cloak>{{ dropdown }}</h3>
+        <input type="text" placeholder="What is your name" ng-model="name">
+        <h1>my name is {{ name }}</h1>
 
-		<!-- cdn -->
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
-		<!-- javascript -->
-		<script src="app.js" type="text/javascript"></script>
-		<!-- <script src="javascript/controllers/FilterController.js" type="text/javascript"></script> -->
-	</body>
+        <!-- DROPDOWN MENU   -->
+        <select name="dropdown" id="dropdown-menu" ng-model="dropdown">
+            <option value="dogs">dogs</option>
+            <option value="cat">cats</option>
+            <option value="cats dogs">cats dogs</option>
+            <option value="other">other</option>
+        </select>
+        <h2 ng-model="dropdown" ng-cloak>{{ dropdown }}</h3>
+
+        <!-- cdn -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+        <!-- javascript -->
+        <script src="app.js" type="text/javascript"></script>
+        <!-- <script src="javascript/controllers/FilterController.js" type="text/javascript"></script> -->
+    </body>
 </html>
